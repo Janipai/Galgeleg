@@ -7,7 +7,7 @@
     tools:context=".Spillet">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/galgeImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -17,7 +17,7 @@
         tools:layout_editor_absoluteY="80dp" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/gaet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Gæt"

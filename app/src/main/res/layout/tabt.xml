@@ -18,7 +18,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button7"
+        android:id="@+id/spilIgen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Spil igen"
@@ -26,7 +26,7 @@
         tools:layout_editor_absoluteY="527dp" />
 
     <Button
-        android:id="@+id/button8"
+        android:id="@+id/goToHighscore"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Se highscore board"
