@@ -32,6 +32,9 @@ public class Spillet extends AppCompatActivity implements View.OnClickListener {
         if (v.getId()==R.id.gaet){
 
         }
+
+        EditText ed = (EditText) findViewById(R.id.inputField);
+        ed.getText();
     }
 
     public void spil() {
