@@ -20,12 +20,9 @@ import com.google.gson.Gson;
 
 public class Highscore extends AppCompatActivity implements View.OnClickListener {
 
-    TextView highscoreName, highscoreScore, position;
-
-    ArrayList<String> highscore = new ArrayList<String>();
-    ArrayList<Spiller> spillerArrayListay = new ArrayList<Spiller>();
-    ListView listView = (ListView) findViewById(R.id.highscore);
-    Gson gson = new Gson();
+    SpillerListAdapter spillerAdapter;
+    ListView listView;
+    ArrayList<Spiller> spillerListe= new ArrayList<>();
     Spiller burhan = new Spiller("ga", 2);
 
 
@@ -34,7 +31,11 @@ public class Highscore extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.highscore);
 
-        SpillerListAdapter adapter = new ArrayAdapter()
+        spillerListe.add(burhan);
+        listView = (ListView) findViewById(R.id.highscoreListView);
+
+        spillerAdapter = new SpillerListAdapter(this, spillerListe);
+        listView.setAdapter(spillerAdapter);
     }
 
     @Override

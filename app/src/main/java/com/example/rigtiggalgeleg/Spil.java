@@ -75,7 +75,11 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
         word.append("\n Du har gættet følgende bogstaver " + galgeLogik.getBrugteBogstaver());
 
         //opdaterer galgen
-        if (galgeLogik.getAntalForkerteBogstaver() == 1)
+        if (galgeLogik.erSpilletVundet()) {
+            Intent vundet = new Intent(this, Vundet.class);
+            startActivity(vundet);
+        }
+        else if (galgeLogik.getAntalForkerteBogstaver() == 1)
             imgview.setImageResource(R.drawable.forkert1);
         else if (galgeLogik.getAntalForkerteBogstaver() == 2)
             imgview.setImageResource(R.drawable.forkert2);
@@ -87,16 +91,9 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
             imgview.setImageResource(R.drawable.forkert5);
         else if (galgeLogik.getAntalForkerteBogstaver() == 6) {
             imgview.setImageResource(R.drawable.forkert6);
-            galgeLogik.erSpilletTabt();
             Intent tabt = new Intent(this, Tabt.class);
             startActivity(tabt);
         }
-        if (galgeLogik.erSpilletVundet()) {
-            galgeLogik.erSpilletVundet();
-            Intent vundet = new Intent(this, Vundet.class);
-            startActivity(vundet);
-        }
-
 
     }
 
