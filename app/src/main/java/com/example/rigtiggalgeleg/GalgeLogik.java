@@ -20,7 +20,10 @@ public class GalgeLogik {
     private boolean spilletErVundet;
     private boolean spilletErTabt;
 
-    public Galgelogik() {
+    //ny variable score
+    private int score;
+
+    public GalgeLogik() {
         muligeOrd.add("bil");
         muligeOrd.add("computer");
         muligeOrd.add("programmering");
@@ -66,6 +69,10 @@ public class GalgeLogik {
         return spilletErTabt || spilletErVundet;
     }
 
+
+    //getter og setter for score
+    public int getScore() { return score; }
+    public void setScore(int score) { this.score = score; }
 
     public void startNytSpil() {
         brugteBogstaver.clear();
@@ -202,7 +209,18 @@ public class GalgeLogik {
         startNytSpil();
     }
 
-    public static void main(String[] args) throws Exception {
-        new Galgelogik().hentOrdFraRegneark("2");
+    //nulstiller
+    public void nulstil() {
+        brugteBogstaver.clear();
+        antalForkerteBogstaver = 0;
+        spilletErVundet = false;
+        spilletErTabt = false;
+        ordet = muligeOrd.get(new Random().nextInt(muligeOrd.size()));
+        opdaterSynligtOrd();
     }
+
+    public static void main(String[] args) throws Exception {
+        new GalgeLogik().hentOrdFraRegneark("2");
+    }
+
 }

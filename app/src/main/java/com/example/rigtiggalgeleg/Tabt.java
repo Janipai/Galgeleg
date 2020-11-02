@@ -24,8 +24,8 @@ public class Tabt extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        if (v.getId()==R.id.spilIgen){
-            Intent spil = new Intent(this, Spillet.class);
+        if (v.getId()==R.id.spilIgenTabt){
+            Intent spil = new Intent(this, Spil.class);
             startActivity(spil);
         }
         else if (v.getId()==R.id.goToHighscore){

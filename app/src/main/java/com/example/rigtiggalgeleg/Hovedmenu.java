@@ -16,12 +16,15 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hovedmenu);
 
+        //knap for at starte spillet
         spil = (Button) findViewById(R.id.spil);
         spil.setOnClickListener(this);
 
+        //knap for at reache hjælp
         hjaelp = (Button) findViewById(R.id.hjaelp);
         hjaelp.setOnClickListener(this);
 
+        //knap for at se highscores
         highscore = (Button) findViewById(R.id.highscore);
         highscore.setOnClickListener(this);
     }
@@ -29,9 +32,11 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
 
     @Override
     public void onClick(View v) {
+        //sammenligner om det id på den knap der er trykket på
+        //går hen til den knaps aktivitet
         if (v.getId() == R.id.spil) {
             //explicit intent
-            Intent spil = new Intent(this, Spillet.class);
+            Intent spil = new Intent(this, Spil.class);
             startActivity(spil);
         } else if (v.getId() == R.id.hjaelp){
             Intent hjaelp = new Intent(this, Hjaelp.class);

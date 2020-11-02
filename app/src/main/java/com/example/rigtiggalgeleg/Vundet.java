@@ -26,7 +26,7 @@ public class Vundet extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId()==R.id.spilIgen2){
-            Intent spil = new Intent(this, Spillet.class);
+            Intent spil = new Intent(this, Spil.class);
             startActivity(spil);
         }
         else if (v.getId()==R.id.goToHighscore2){

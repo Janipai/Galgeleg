@@ -1,10 +1,10 @@
 package com.example.rigtiggalgeleg;
 
-public class Spillere {
+public class Spiller {
     private String navn;
     private int score;
 
-    public Spillere(String navn, int score) {
+    public Spiller(String navn, int score) {
         this.navn = navn;
         this.score = score;
     }
@@ -25,7 +25,7 @@ public class Spillere {
         this.score = score;
     }
 
-    public Spillere (Spillere s){
-        Spillere spillere = new Spillere(s.navn,score);
+    public Spiller(Spiller s){
+        Spiller spiller = new Spiller(s.navn,score);
     }
 }
