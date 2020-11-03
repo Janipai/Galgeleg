@@ -23,7 +23,7 @@ public class Highscore extends AppCompatActivity implements View.OnClickListener
     SpillerListAdapter spillerAdapter;
     ListView listView;
     ArrayList<Spiller> spillerListe= new ArrayList<>();
-    Spiller burhan = new Spiller("ga", 2);
+    Gson gson = new Gson();
 
 
     @Override
@@ -31,8 +31,13 @@ public class Highscore extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.highscore);
 
-        spillerListe.add(burhan);
+        SharedPreferences prefs = getSharedPreferences("Highscore", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
         listView = (ListView) findViewById(R.id.highscoreListView);
+
+        Spiller spiller = gson.fromJson(getIntent().getStringExtra("Spiller"), Spiller.class);
+        spillerListe.add(spiller);
 
         spillerAdapter = new SpillerListAdapter(this, spillerListe);
         listView.setAdapter(spillerAdapter);
