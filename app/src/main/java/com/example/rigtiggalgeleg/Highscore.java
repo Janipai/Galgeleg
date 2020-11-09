@@ -17,10 +17,12 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
 import com.google.gson.Gson;
 
 public class Highscore extends AppCompatActivity implements View.OnClickListener {
 
+    Contex ctx = Contex.getInstance();
     SpillerListAdapter spillerAdapter;
     ListView listView;
     Gson gson = new Gson();
@@ -78,6 +80,7 @@ public class Highscore extends AppCompatActivity implements View.OnClickListener
             Intent hovedMenu = new Intent(this, Hovedmenu.class);
             startActivity(hovedMenu);
         } else if (v.getId() == R.id.spilFraHighscore) {
+            ctx.startNytSpil();
             Intent spil = new Intent(this, Spil.class);
             startActivity(spil);
         }

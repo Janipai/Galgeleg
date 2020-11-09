@@ -9,12 +9,14 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
+import com.example.rigtiggalgeleg.Model_logik.Model_logik.PlayingState;
 import com.google.gson.Gson;
 
 public class Vundet extends AppCompatActivity implements View.OnClickListener {
 
+    Contex ctx = Contex.getInstance();
     Button spilIgen, highscore;
-    GalgeLogik galgeLogik = new GalgeLogik();
     EditText highscoreNavn;
     int score;
     Spiller spiller;
@@ -41,6 +43,7 @@ public class Vundet extends AppCompatActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.spilIgen2) {
+            ctx.startNytSpil();
             Intent spil = new Intent(this, Spil.class);
             spil.putExtra("Score", score);
             startActivity(spil);
