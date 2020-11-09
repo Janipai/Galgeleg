@@ -51,13 +51,27 @@
     <ListView
         android:id="@+id/highscoreListView"
         android:layout_width="match_parent"
-        android:layout_height="630dp"
+        android:layout_height="520dp"
         app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="99dp"
         app:layout_constraintTop_toBottomOf="@+id/navn"
-    >
-    </ListView>
+    />
 
+    <Button
+        android:id="@+id/tilbage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tilbage"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/spilFraHighscore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Spil spillet"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
