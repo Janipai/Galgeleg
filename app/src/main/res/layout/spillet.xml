@@ -22,34 +22,34 @@
         android:id="@+id/gaet"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="Gæt"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/galgeImg" />
+        app:layout_constraintTop_toBottomOf="@+id/inputField" />
 
     <EditText
         android:id="@+id/inputField"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:ems="10"
         android:hint="Gaet et bogstav"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/gaet"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/galgeImg"
-        app:layout_constraintVertical_bias="0.631" />
+        app:layout_constraintTop_toBottomOf="@+id/fejltxt" />
 
     <TextView
         android:id="@+id/ordetDerGaettes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:text="TextView"
-        app:layout_constraintBottom_toTopOf="@+id/inputField"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/galgeImg" />
 
@@ -57,12 +57,23 @@
         android:id="@+id/fejltxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="10dp"
         android:text="TextView"
         app:layout_constraintBottom_toTopOf="@+id/fejltxt"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ordetDerGaettes"
+        app:layout_constraintTop_toBottomOf="@+id/gaetBogstavet"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/gaetBogstavet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ordetDerGaettes" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

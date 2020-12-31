@@ -14,16 +14,19 @@ import com.example.rigtiggalgeleg.Model_logik.Model_logik.NotPlayingState;
 public class Hovedmenu extends AppCompatActivity implements View.OnClickListener {
 
     Contex ctx = Contex.getInstance();
-    Button spil, hjaelp, highscore;
+    Button spil, multiplayerbutton, hjaelp, highscore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.hovedmenu);
 
-        //knap for at starte spillet
+        //button for singleplayer
         spil = (Button) findViewById(R.id.spil);
         spil.setOnClickListener(this);
+
+        //button for multiplayer
+        multiplayerbutton = (Button) findViewById(R.id.multiplayerbutton);
 
         //knap for at reache hjælp
         hjaelp = (Button) findViewById(R.id.hjaelp);
