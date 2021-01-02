@@ -20,7 +20,6 @@ public class Contex {
 
     //ny variable score
     private int score;
-    TextView word;
 
     public ArrayList<String> getBrugteBogstaver() {
         return brugteBogstaver;
