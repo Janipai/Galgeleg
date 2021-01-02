@@ -1,4 +1,4 @@
-package com.example.rigtiggalgeleg;
+package com.example.s195477;
 
 import org.junit.Test;
 

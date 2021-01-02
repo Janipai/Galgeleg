@@ -1,4 +1,4 @@
-package com.example.rigtiggalgeleg;
+package com.example.s195477;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,9 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.NotPlayingState;
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.PlayingState;
+import com.example.s195477.Model_logik.Model_logik.Contex;
+import com.example.s195477.Model_logik.Model_logik.NotPlayingState;
 
 public class Spil extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,6 +26,7 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.spillet);
 
         ctx.startNytSpil();
@@ -52,13 +52,10 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
         imgview = (ImageView) findViewById(R.id.galgeImg);
         //input felt til bogstaver der vil gættes
         input = (EditText) findViewById(R.id.inputField);
-
-
     }
 
     @Override
     public void onClick(View v) {
-
         //status til loggen
         ctx.logStatus();
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.rigtiggalgeleg">
+    package="com.example.s195477">
     <uses-permission android:name="android.permission.INTERNET" />
 
 
@@ -11,18 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Highscore"></activity>
-        <activity android:name=".Hjaelp" />
-        <activity android:name=".Hovedmenu">
+        <activity android:name="com.example.s195477.Highscore"></activity>
+        <activity android:name="com.example.s195477.Hjaelp" />
+        <activity android:name="com.example.s195477.Hovedmenu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Tabt" />
-        <activity android:name=".Vundet" />
-        <activity android:name=".Spil">
+        <activity android:name="com.example.s195477.Tabt" />
+        <activity android:name="com.example.s195477.Vundet" />
+        <activity android:name="com.example.s195477.Spil">
         </activity>
     </application>
 

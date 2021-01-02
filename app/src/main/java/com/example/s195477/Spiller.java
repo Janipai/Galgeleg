@@ -1,4 +1,4 @@
-package com.example.rigtiggalgeleg;
+package com.example.s195477;
 
 public class Spiller {
     private String navn;

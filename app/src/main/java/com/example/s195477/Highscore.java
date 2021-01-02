@@ -1,4 +1,4 @@
-package com.example.rigtiggalgeleg;
+package com.example.s195477;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,17 +7,14 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
+import com.example.s195477.Model_logik.Model_logik.Contex;
 import com.google.gson.Gson;
 
 public class Highscore extends AppCompatActivity implements View.OnClickListener {

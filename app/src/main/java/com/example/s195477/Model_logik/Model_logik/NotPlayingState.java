@@ -1,10 +1,5 @@
-package com.example.rigtiggalgeleg.Model_logik.Model_logik;
+package com.example.s195477.Model_logik.Model_logik;
 
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import java.util.ArrayList;
 import java.util.Random;
 
 public class NotPlayingState extends Adapter {

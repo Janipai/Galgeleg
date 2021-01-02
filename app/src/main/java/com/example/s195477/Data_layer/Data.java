@@ -1,11 +1,4 @@
-package com.example.rigtiggalgeleg.Data_layer;
-
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.NotPlayingState;
+package com.example.s195477.Data_layer;
 
 import java.io.BufferedReader;
 import java.io.IOException;

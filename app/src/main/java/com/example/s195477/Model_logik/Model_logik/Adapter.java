@@ -1,4 +1,4 @@
-package com.example.rigtiggalgeleg.Model_logik.Model_logik;
+package com.example.s195477.Model_logik.Model_logik;
 
 public class Adapter implements States {
 

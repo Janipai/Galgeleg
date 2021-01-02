@@ -1,15 +1,16 @@
-package com.example.rigtiggalgeleg;
+package com.example.s195477;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.NotPlayingState;
+import com.example.s195477.Model_logik.Model_logik.Contex;
+import com.example.s195477.Model_logik.Model_logik.NotPlayingState;
 
 public class Hovedmenu extends AppCompatActivity implements View.OnClickListener {
 
@@ -27,6 +28,7 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
 
         //button for multiplayer
         multiplayerbutton = (Button) findViewById(R.id.multiplayerbutton);
+        multiplayerbutton.setOnClickListener(this);
 
         //knap for at reache hjælp
         hjaelp = (Button) findViewById(R.id.hjaelp);
@@ -49,7 +51,19 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
             startActivity(spil);
             ctx.changeState(new NotPlayingState());
 
-        } else if (v.getId() == R.id.hjaelp){
+        }else if (v.getId()==R.id.multiplayerbutton){
+            // Create new fragment and transaction
+            Fragment multi = new Multiplayer();
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+
+            // Replace whatever is in the fragment_container view with this fragment,
+            // and add the transaction to the back stack if needed
+            transaction.replace(R.id.frame_multiplayer, multi);
+            transaction.addToBackStack(null);
+
+            // Commit the transaction
+            transaction.commit();
+        }else if (v.getId() == R.id.hjaelp){
             Intent hjaelp = new Intent(this, Hjaelp.class);
             startActivity(hjaelp);
         }else if (v.getId() == R.id.highscore){

@@ -1,4 +1,4 @@
-package com.example.rigtiggalgeleg;
+package com.example.s195477;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,8 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.Contex;
-import com.example.rigtiggalgeleg.Model_logik.Model_logik.PlayingState;
+import com.example.s195477.Model_logik.Model_logik.Contex;
 import com.google.gson.Gson;
 
 public class Vundet extends AppCompatActivity implements View.OnClickListener {
