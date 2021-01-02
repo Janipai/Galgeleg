@@ -1,28 +1,37 @@
 package com.example.s195477;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-public class SelvValgtOrd extends Fragment {
+public class SelvValgtOrd extends AppCompatActivity implements View.OnClickListener {
 
-    public SelvValgtOrd() {
-        // Required empty public constructor
-    }
+    EditText input;
+    Button confirm;
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_selv_valgt_ord2);
+
+        input = findViewById(R.id.inputSelvValgtOrd);
+        confirm = findViewById(R.id.confirmButton);
+
+        confirm.setOnClickListener(this);
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_selv_valgt_ord, container, false);
+    public void onClick(View v) {
+        String wordToGuess = input.getText().toString();
+
+        if (v.getId() == R.id.confirmButton) {
+            Intent spil = new Intent(this, SelvValgtOrd.class);
+            startActivity(spil);
+        }
     }
 }

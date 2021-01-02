@@ -1,29 +1,14 @@
 package com.example.s195477;
 
+import androidx.appcompat.app.AppCompatActivity;
+
 import android.os.Bundle;
 
-import androidx.fragment.app.Fragment;
-
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-public class OrdListe extends Fragment {
-
-
-    public OrdListe() {
-        // Required empty public constructor
-    }
+public class OrdListe extends AppCompatActivity {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ord_liste, container, false);
+        setContentView(R.layout.activity_ord_liste2);
     }
 }

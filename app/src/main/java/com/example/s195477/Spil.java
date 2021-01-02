@@ -17,7 +17,7 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
 
     Contex ctx = Contex.getInstance();
 
-    TextView word, fejltxt;
+    TextView word, guessedLetter, fejltxt;
     ImageView imgview;
     Button guess;
     EditText input;
@@ -39,6 +39,10 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
         word = (TextView) findViewById(R.id.ordetDerGaettes);
         System.out.println(ctx.getSynligtOrd());
         word.setText("Gæt ordet: " + ctx.getSynligtOrd());
+
+        //txt til hvilke forkertebogstaver
+        guessedLetter = (TextView) findViewById(R.id.guessedLetter);
+        guessedLetter.setText("");
 
         //txt til hvilke forkertebogstaver
         fejltxt = (TextView) findViewById(R.id.fejltxt);
@@ -73,7 +77,7 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
         if (v.getId() == R.id.gaet) {
             ctx.gætBogstav(bogstav);
             word.setText("Gæt ordet: " + ctx.getSynligtOrd());
-            fejltxt.setText("Forkerte bogstaver gættet: " + ctx.getBrugteBogstaver());
+            guessedLetter.setText("Forkerte bogstaver gættet: " + ctx.getBrugteBogstaver());
 
             if (bogstav.length() != 1) {
                 fejltxt.setText("Der må kun gættes på et bogstav");
@@ -110,5 +114,6 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
             }
         }
         input.setText("");
+        guessedLetter.setText("");
     }
 }

@@ -52,17 +52,8 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
             ctx.changeState(new NotPlayingState());
 
         }else if (v.getId()==R.id.multiplayerbutton){
-            // Create new fragment and transaction
-            Fragment multi = new Multiplayer();
-            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-            // Replace whatever is in the fragment_container view with this fragment,
-            // and add the transaction to the back stack if needed
-            transaction.replace(R.id.frame_multiplayer, multi);
-            transaction.addToBackStack(null);
-
-            // Commit the transaction
-            transaction.commit();
+            Intent multiplayer = new Intent(this, Multiplayer.class);
+            startActivity(multiplayer);
         }else if (v.getId() == R.id.hjaelp){
             Intent hjaelp = new Intent(this, Hjaelp.class);
             startActivity(hjaelp);
