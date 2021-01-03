@@ -1,9 +1,8 @@
 package com.example.s195477;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +13,6 @@ import com.example.s195477.Model_logik.Model_logik.NotPlayingState;
 
 public class Hovedmenu extends AppCompatActivity implements View.OnClickListener {
 
-    Contex ctx = Contex.getInstance();
     Button spil, multiplayerbutton, hjaelp, highscore;
 
     @Override
@@ -23,7 +21,7 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
         setContentView(R.layout.hovedmenu);
 
         //button for singleplayer
-        spil = (Button) findViewById(R.id.spil);
+        spil = (Button) findViewById(R.id.singleplayerbutton);
         spil.setOnClickListener(this);
 
         //button for multiplayer
@@ -44,12 +42,12 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
     public void onClick(View v) {
         //sammenligner om det id på den knap der er trykket på
         //går hen til den knaps aktivitet
-        if (v.getId() == R.id.spil) {
+        if (v.getId() == R.id.singleplayerbutton) {
 
             //explicit intent
-            Intent spil = new Intent(this, Spil.class);
-            startActivity(spil);
-            ctx.changeState(new NotPlayingState());
+            Intent svaerhed = new Intent(this, Svaerhedsgrad.class);
+            //nu med animation
+            startActivity(svaerhed, ActivityOptions.makeSceneTransitionAnimation(this).toBundle());
 
         }else if (v.getId()==R.id.multiplayerbutton){
             Intent multiplayer = new Intent(this, Multiplayer.class);

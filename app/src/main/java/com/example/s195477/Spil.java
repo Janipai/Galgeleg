@@ -3,6 +3,8 @@ package com.example.s195477;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -84,6 +86,9 @@ public class Spil extends AppCompatActivity implements View.OnClickListener {
             }
             //opdaterer galgen
             if (ctx.erSpilletVundet()) {
+                MediaPlayer mp = MediaPlayer.create(getApplicationContext(), android.R.raw.won_sound);
+                mp.start();
+
                 Intent vundet = new Intent(this, Vundet.class);
                 vundet.putExtra("Score", score);
                 startActivity(vundet);

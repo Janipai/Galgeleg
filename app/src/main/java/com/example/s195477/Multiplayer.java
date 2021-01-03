@@ -1,8 +1,6 @@
 package com.example.s195477;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +9,7 @@ import android.widget.Button;
 
 public class Multiplayer extends AppCompatActivity implements View.OnClickListener {
 
-    Button selvValgtOrd, fraOrdListe;
+    Button selvValgtOrd, twoplayers;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,10 +17,10 @@ public class Multiplayer extends AppCompatActivity implements View.OnClickListen
         setContentView(R.layout.activity_multiplayer);
 
         selvValgtOrd = (Button) findViewById(R.id.selvValgtOrd);
-        fraOrdListe = (Button) findViewById(R.id.fraOrdliste);
+        twoplayers = (Button) findViewById(R.id.twoplayers);
 
         selvValgtOrd.setOnClickListener(this);
-        fraOrdListe.setOnClickListener(this);
+        twoplayers.setOnClickListener(this);
     }
 
     @Override
@@ -30,9 +28,9 @@ public class Multiplayer extends AppCompatActivity implements View.OnClickListen
         if (v.getId() == R.id.selvValgtOrd) {
             Intent selvValgtOrd = new Intent(this, SelvValgtOrd.class);
             startActivity(selvValgtOrd);
-        } else if (v.getId() == R.id.fraOrdliste) {
-            Intent fraOrdliste = new Intent(this, OrdListe.class);
-            startActivity(fraOrdliste);
+        } else if (v.getId() == R.id.twoplayers) {
+            Intent difficulty = new Intent(this, Svaerhedsgrad.class);
+            startActivity(difficulty);
         }
     }
 }

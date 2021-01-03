@@ -9,8 +9,12 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.s195477.Model_logik.Model_logik.Contex;
+import com.example.s195477.Model_logik.Model_logik.NotPlayingState;
+
 public class SelvValgtOrd extends AppCompatActivity implements View.OnClickListener {
 
+    Contex ctx = Contex.getInstance();
     EditText input;
     Button confirm;
     TextView error;
@@ -38,6 +42,7 @@ public class SelvValgtOrd extends AppCompatActivity implements View.OnClickListe
         }else if (v.getId() == R.id.confirmButton) {
             Intent spil = new Intent(this, Spil.class);
             startActivity(spil);
+            ctx.changeState(new NotPlayingState());
         }
     }
 }

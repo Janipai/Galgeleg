@@ -7,7 +7,7 @@
     tools:context=".Hovedmenu">
 
     <Button
-        android:id="@+id/spil"
+        android:id="@+id/singleplayerbutton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
@@ -68,6 +68,6 @@
         android:text="Multi Player"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spil" />
+        app:layout_constraintTop_toBottomOf="@+id/singleplayerbutton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

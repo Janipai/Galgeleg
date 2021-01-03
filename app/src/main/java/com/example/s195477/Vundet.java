@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.TextView;
 
 import com.example.s195477.Model_logik.Model_logik.Contex;
@@ -16,7 +15,7 @@ public class Vundet extends AppCompatActivity implements View.OnClickListener {
 
     Contex ctx = Contex.getInstance();
     Button spilIgen, highscore;
-    EditText highscoreNavn;
+    TextView vundetTxtView;
     int score;
     Spiller spiller;
 
@@ -27,7 +26,7 @@ public class Vundet extends AppCompatActivity implements View.OnClickListener {
 
         score = getIntent().getIntExtra("Score", 0);
 
-        TextView vundetTxtView = (TextView) findViewById(R.id.textView2);
+        vundetTxtView = (TextView) findViewById(R.id.wontxt);
         vundetTxtView.setText("Din score: " + score);
 
         spilIgen = (Button) findViewById(R.id.spilIgen2);
@@ -36,9 +35,9 @@ public class Vundet extends AppCompatActivity implements View.OnClickListener {
         highscore = (Button) findViewById(R.id.submit);
         highscore.setOnClickListener(this);
 
-        highscoreNavn = (EditText) findViewById(R.id.navnTilHighscore);
     }
 
+    Svaerhedsgrad svaerhedsgrad = new Svaerhedsgrad();
     @Override
     public void onClick(View v) {
         if (v.getId() == R.id.spilIgen2) {
@@ -49,7 +48,7 @@ public class Vundet extends AppCompatActivity implements View.OnClickListener {
         } else if (v.getId() == R.id.submit) {
             Intent highscore = new Intent(this, Highscore.class);
 
-            spiller = new Spiller(highscoreNavn.getText().toString(), score);
+            spiller = new Spiller(svaerhedsgrad.playersname.getText().toString(), score);
             Gson gson = new Gson();
             String spillerInfo = gson.toJson(spiller);
             highscore.putExtra("Spiller", spillerInfo);

@@ -9,7 +9,15 @@ import java.util.Date;
 
 public class Contex {
     private States states;
-    private static Contex ctx = new Contex();
+    private static Contex ctx;
+
+    static {
+        try {
+            ctx = new Contex();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
     /** AHT afprøvning er muligeOrd synlig på pakkeniveau */
     ArrayList<String> muligeOrd = new ArrayList<String>();
@@ -59,7 +67,6 @@ public class Contex {
 
     private Contex() throws Exception {
         states  = new NotPlayingState();
-
 
         muligeOrd.add("bil");
         muligeOrd.add("computer");
