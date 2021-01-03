@@ -7,7 +7,7 @@
     tools:context=".Highscore">
 
     <TextView
-        android:id="@+id/highscoreHeadline"
+        android:id="@+id/ordListeHeadline"
         android:text="Highscore"
 
         android:layout_width="wrap_content"
@@ -26,7 +26,7 @@
         android:layout_marginTop="50dp"
         android:text="Plads"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/highscoreHeadline" />
+        app:layout_constraintTop_toTopOf="@+id/ordListeHeadline" />
     <TextView
         android:id="@+id/navn"
         android:text="Navn"
@@ -35,7 +35,7 @@
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/highscoreHeadline" />
+        app:layout_constraintTop_toTopOf="@+id/ordListeHeadline" />
 
     <TextView
         android:id="@+id/score"
@@ -46,10 +46,10 @@
         android:layout_marginEnd="25dp"
         android:text="Score"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/highscoreHeadline" />
+        app:layout_constraintTop_toTopOf="@+id/ordListeHeadline" />
 
     <ListView
-        android:id="@+id/highscoreListView"
+        android:id="@+id/ordlisteListView"
         android:layout_width="match_parent"
         android:layout_height="520dp"
         app:layout_constraintStart_toStartOf="parent"

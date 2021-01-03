@@ -32,6 +32,7 @@ public class Highscore extends AppCompatActivity implements View.OnClickListener
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.highscore);
+
         tilbage = (Button) findViewById(R.id.tilbage);
         tilbage.setOnClickListener(this);
         spilFraHighscore = (Button) findViewById(R.id.spilFraHighscore);
@@ -40,7 +41,7 @@ public class Highscore extends AppCompatActivity implements View.OnClickListener
         SharedPreferences prefs = getSharedPreferences("Highscore", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
 
-        listView = (ListView) findViewById(R.id.highscoreListView);
+        listView = (ListView) findViewById(R.id.ordlisteListView);
         spillerAdapter = new SpillerListAdapter(this, spillerListe);
         listView.setAdapter(spillerAdapter);
 

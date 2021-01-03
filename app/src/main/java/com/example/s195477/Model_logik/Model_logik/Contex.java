@@ -2,7 +2,10 @@ package com.example.s195477.Model_logik.Model_logik;
 
 import android.widget.TextView;
 
+import com.example.s195477.Data_layer.Data;
+
 import java.util.ArrayList;
+import java.util.Date;
 
 public class Contex {
     private States states;
@@ -54,8 +57,9 @@ public class Contex {
         return ctx;
     }
 
-    private Contex(){
+    private Contex() throws Exception {
         states  = new NotPlayingState();
+
 
         muligeOrd.add("bil");
         muligeOrd.add("computer");

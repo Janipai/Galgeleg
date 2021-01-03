@@ -11,7 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OrdListe"></activity>
+        <activity android:name=".Svaerhedsgrad"></activity>
         <activity android:name=".SelvValgtOrd" />
         <activity android:name=".Multiplayer" />
         <activity android:name=".Highscore" />

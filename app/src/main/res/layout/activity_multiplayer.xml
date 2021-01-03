@@ -27,7 +27,7 @@
         android:layout_alignParentEnd="true"
         android:layout_marginStart="40dp"
         android:layout_marginTop="125dp"
-        android:text="Vælg selv"
+        android:text="Vælg selv et ord"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -39,7 +39,7 @@
         android:layout_alignParentStart="true"
         android:layout_marginTop="125dp"
         android:layout_marginEnd="40dp"
-        android:text="Fra ordliste"
+        android:text="Skift mellem gæt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
@@ -53,7 +53,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginTop="70dp"
         android:text="Find på et ord som din modstander skal gætte.
-        Hvis ikke du kan finde på et ord selv, kan du også tage et fra ordlisten"
+        Eller vær på skift mellem at gætte det samme ord"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
