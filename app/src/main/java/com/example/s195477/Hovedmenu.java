@@ -18,6 +18,7 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadeout, R.anim.fadeout);
         setContentView(R.layout.hovedmenu);
 
         //button for singleplayer
@@ -35,6 +36,9 @@ public class Hovedmenu extends AppCompatActivity implements View.OnClickListener
         //knap for at se highscores
         highscore = (Button) findViewById(R.id.highscore);
         highscore.setOnClickListener(this);
+    }
+
+    private void overridePendingTransition(int fadeout) {
     }
 
 

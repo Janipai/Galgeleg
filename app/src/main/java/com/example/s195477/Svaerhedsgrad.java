@@ -32,6 +32,7 @@ public class Svaerhedsgrad extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fadeout, R.anim.fadeout);
         setContentView(R.layout.activity_svaerhedsgrad);
 
         playersname = findViewById(R.id.playersname);
@@ -87,7 +88,7 @@ public class Svaerhedsgrad extends AppCompatActivity implements AdapterView.OnIt
         String playername = playersname.getText().toString();
         int score = 0;
 
-        if (v.getId()==R.id.confirmsvaerhed && playername.equals("")){
+        if (v.getId()==R.id.confirmsvaerhed && !playername.equals("")){
 
             spiller = new Spiller(playersname.getText().toString(), score);
 
